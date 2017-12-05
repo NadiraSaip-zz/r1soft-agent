@@ -1,0 +1,11 @@
+---
+- hosts: all
+  connection: ssh
+  become: yes
+  become_method: sudo
+  tasks:
+   - name: Install r1soft agent to remote system
+     yum:
+       name: r1soft-cdp-enterprise-server
+       state: latest
+
